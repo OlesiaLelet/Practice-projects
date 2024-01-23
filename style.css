@@ -1,0 +1,43 @@
+.content {
+    display:flex;   
+}
+.box { 
+    background-color: black;
+    width: 80px;
+    height: 80px;
+    margin: 0px 2.5px 5px 2.5px;
+    box-sizing: border-box;
+    animation-name: circle;
+    animation-duration: 3s;
+    
+ 
+}
+.box:hover {
+    background:green;
+    transition: all 0.2s ease-in;
+
+}
+.box:active {
+    animation-name: tap;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    }
+
+
+@keyframes circle {
+    0%{border-radius: 35px;background-color: orange;}
+    25% {border-radius: 35px;background-color: yellow;}
+    50% {border-radius: 35px;background-color: green;}
+    75% {width: 80px; height: 80px;border-radius: 10px;background-color: green;}
+    100% {width: 80px; height: 80px;background-color: black;}
+}
+@keyframes tap {
+    0% {transform:scale(1);  background-color: green;}
+    50% {transform: rotateZ(90deg) scale(0.5); background-color: red;}
+    100% {transform: rotateZ(180deg); background-color: green;}
+    
+}
+/* @keyframes tap-1 { 
+    from {transform:rotate(0deg) scale(0.5); background-color: red;}
+    to {transform: rotateZ(90deg); background-color: green;}
+}  */
